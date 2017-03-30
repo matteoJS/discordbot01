@@ -73,27 +73,8 @@ client.on('error', error => console.log(error))
 client.login(secret.token)
 ```
 
-Run the script with `node main.js`, and once you see 
+We can now start our bot with `node main.js`, and if everything is working properly
+you should be able to have a rivting conversation such as this one.
 
 
-## Deploying to AWS free EC2 Instance
-
-If you want your bot to be constanly available but don't currently have
-a machine you can keep running 24/7, deploying 
-small ec2 instance
-We will use forever to start our bot as a background process. Since
-we'll be calling it from the command line be sure to install it with
-the global flag:
-
-```
-npm install forever --global
-```
-
-Next, create a file named `startbot.sh` and add the following text:
-
-
-```bash
-#!/bin/bash
-forever ~/demobot/main.js -o bot.log -e boterr.log
-```
 
